@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de contenteditable en JavaScript</title>
+</head>
+<body>
+  <div id="miDiv" contenteditable="true">
+    Este es un texto editable. Puedes modificarlo directamente en la página.
+  </div>
+
+  <button onclick="guardarCambios()">Guardar Cambios</button>
+  <span id="text-editable"></span>
+  <script>
+    // Función para guardar los cambios realizados en el div editable
+    function guardarCambios() {
+      var miDiv = document.getElementById("miDiv");
+      var contenido = miDiv.innerHTML; 
+      // Obtenemos el contenido del div editable
+      var textComplete = document.getElementById("text-editable");
+      
+      console.log("Contenido modificado: " + contenido);
+      textComplete.textContent = contenido
+     // Aquí puedes hacer cualquier otra acción con el contenido, como enviarlo al servidor para ser guardado
+    }
+  </script>
+</body>
+</html>
